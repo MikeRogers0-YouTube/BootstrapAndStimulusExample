@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BootstrapAndStimulusExample</title>
+    <title>Bootstrap And Stimulus Example</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container mt-5 mb-5 text-center">
+      <h1>Bootstrap And Stimulus Example</h1>
+    </div>
+
+    <main class="container" role="main">
+      <%= yield %>
+    </main>
   </body>
 </html>
