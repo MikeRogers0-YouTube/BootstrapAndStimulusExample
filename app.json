@@ -1,0 +1,55 @@
+{
+  "name": "Bootstrap And Stimulus Example",
+  "description": "How to listen to Bootstrap events in Stimulus",
+  "repository": "https://github.com/MikeRogers0/BootstrapAndStimulusExample",
+  "keywords": ["Rails", "Stimulus", "Bootstrap"],
+  "env": {
+    "LANG": {
+      "required": true,
+      "value": "en_US.UTF-8"
+    },
+    "RACK_ENV": {
+      "required": true,
+      "value": "production"
+    },
+    "RAILS_ENV": {
+      "required": true,
+      "value": "production"
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "required": true,
+      "value": "enabled"
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true,
+      "value": "enabled"
+    },
+    "RAILS_MASTER_KEY": {
+      "required": true,
+      "value": "8700dc6ba6064885cb3eb397095668e6"
+    },
+    "DURING_RELEASE_RUN_MIGRATIONS": {
+      "required": true,
+      "value": "enabled"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 0
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 # Bootstrap And Stimulus Example
 
 Bootstrap uses jQuery's `trigger` method for proving callbacks for events, unfortunately this mean Stimulus can't listen for them using `data-action`.
