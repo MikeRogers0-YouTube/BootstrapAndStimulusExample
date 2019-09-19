@@ -1,24 +1,29 @@
-# README
+# Bootstrap And Stimulus Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bootstrap uses jQuery's `trigger` method for proving callbacks for events, unfortunately this mean Stimulus can't listen for them using `data-action`.
 
-Things you may want to cover:
+This demos a solution that allows for the events to be listened to by a Stimulus controller.
 
-* Ruby version
+## Key files
 
-* System dependencies
+- [config/webpack/environment.js](https://github.com/MikeRogers0/BootstrapAndStimulusExample/blob/master/config/webpack/environment.js) - A tweak to the environment.js is required to make `$` available everywhere.
+- [app/javascript/controllers/open_counter_controller.js](https://github.com/MikeRogers0/BootstrapAndStimulusExample/blob/master/app/javascript/controllers/open_counter_controller.js) - The Stimulus controller that has the counter for when the modal opens
+- [app/views/welcome/index.html.erb](https://github.com/MikeRogers0/BootstrapAndStimulusExample/blob/master/app/views/welcome/index.html.erb) - The HTML sample
 
-* Configuration
+## Setting up locally
 
-* Database creation
+Pull down the repo & run:
 
-* Database initialization
+```bash
+./bin/setup
+```
 
-* How to run the test suite
+- [`bin/setup`](https://github.com/MikeRogers0/RealtimePartialUpdateApp/blob/master/bin/setup) - runs bundler & yarn, then sets up the database.
 
-* Services (job queues, cache servers, search engines, etc.)
+Next you should be able to run:
 
-* Deployment instructions
+```bash
+rails s
+```
 
-* ...
+To turn on the server, your port may vary but if you visit [http://localhost:3000/](http://localhost:3000/) you should be able to see the modal with a counter that updates every time it's opened.
