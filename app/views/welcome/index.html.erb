@@ -4,7 +4,15 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  data-controller="open-counter"
+  >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -14,7 +22,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>You've opened this modal <span>0</span> times</p>
+        <p>You've opened this modal <span data-target="open-counter.openCountOutput">0</span> times</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
